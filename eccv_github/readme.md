@@ -42,9 +42,9 @@ pip install -r requirements.txt
 ### Benchmarks
 
 We propose three benchmarks for the Noisy Long-Tailed (NLT) classification tasks: ImageNet-GLT and MSCOCO-GLT. Please follow the  links below to pre-prepare the datasets.
-- For **ImageNet-NLT** [(link)](http://www.lujiang.info/cnlw.html), 
-- For **Animal10-NLT** [(link)](https://dm.kaist.ac.kr/datasets/animal-10n/), 
-- For **Food101-NLT** [(link)](https://kuanghuei.github.io/Food-101N/), 
+- For **ImageNet-NLT** [(link)](http://www.lujiang.info/cnlw.html), you can download the red&blue noisy mini-ImageNet.
+- For **Animal10-NLT** [(link)](https://dm.kaist.ac.kr/datasets/animal-10n/), you can download Animal-10N.
+- For **Food101-NLT** [(link)](https://kuanghuei.github.io/Food-101N/), you can download Food-101N.
 
 Please refer to ./noise_longtail/construct_data for processing the dataset. We will publish a detailed benchmark geneartion instruction and release the annoatation for our exmperiments soon.
 
