@@ -19,7 +19,7 @@ Conventional de-noising methods rely on the assumption that all samples are inde
 
 
 <div align="center">
-  <img src="./figs/figure1.png"/>
+  <img src="./figure1.png"/>
 </div>
 
 
