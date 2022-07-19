@@ -1,0 +1,31 @@
+TRAIN_DATA_PATH :  './data/dataset/LT_with_noise/LT_noise/blue_noise_nl_0.2'
+TEST_DATA_PATH  :  './data/dataset/mini-imagenet/validation/'
+RESAMPLE_PATH   :  './noise_longtail/code/ClassAwareSampler.py'
+CHECKPOINT_PATH      :  './noise_longtail/model/imagenet/blue/checkpoint/0.2'
+CLASSIFER_PATH       :  './noise_longtail/model/imagenet/blue/classifer/0.2'
+PTH_STAGE_1_PATH     :   './noise_longtail/model/imagenet/blue/checkpoint/0.2/checkpoint_best.pth.tar'
+PTH_STAGE_2_PATH     :   './noise_longtail/model/imagenet/blue/classifer/0.2/checkpoint_best.pth.tar'
+JSON_PATH            : './noise_longtail/json/imagenet/blue/0.2/0.2_score_dict.json'
+FIANL_WEIGHT_PATH    :  './noise_longtail/json/imagenet/blue/0.2/0.2_final_dict.json'
+FINAL_MODEL_PATH     :  './noise_longtail/model/imagenet/blue/best_model/0.2'
+
+
+
+#iterative learning
+ITER_CHECKPOINT_PATH      :  './noise_longtail/iterative_model/imagenet/blue/checkpoint/0.2'
+ITER_CLASSIFER_PATH       :  './noise_longtail/iterative_model/imagenet/blue/classifer/0.2'
+ITER_PTH_STAGE_1_PATH     :   './noise_longtail/iterative_model/imagenet/blue/checkpoint/0.2/checkpoint_best.pth.tar'
+ITER_PTH_STAGE_2_PATH     :   './noise_longtail/iterative_model/imagenet/blue/classifer/0.2/checkpoint_best.pth.tar'
+ITER_JSON_PATH            : './noise_longtail/iterative_json/imagenet/blue/0.2/0.2_score_dict.json'
+ITER_FIANL_WEIGHT_PATH    :  './noise_longtail/iterative_json/imagenet/blue/0.2/0.2_final_dict.json'
+ITER_FINAL_MODEL_PATH     :  './noise_longtail/iterative_model/imagenet/blue/best_model/0.2'
+
+
+
+
+batch_size      : 512
+cls_num         : 100
+logit_adjust    : 1
+resample        : 0
+mix_up          : 0
+mix_up_weight   : 1

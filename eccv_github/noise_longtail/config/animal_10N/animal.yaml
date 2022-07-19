@@ -1,0 +1,29 @@
+TRAIN_DATA_PATH :  './data/dataset/LT_with_noise/animal_LT_0.01/'
+TEST_DATA_PATH  :  './data/dataset/animal-10N/raw_image/test/'
+RESAMPLE_PATH   :  './noise_longtail/code/ClassAwareSampler.py'
+CHECKPOINT_PATH      :  './noise_longtail/model/animal_10N/checkpoint/'
+CLASSIFER_PATH       :  './noise_longtail/model/animal_10N/classifer/'
+PTH_STAGE_1_PATH     :   './noise_longtail/model/animal_10N/checkpoint/checkpoint_best.pth.tar'
+PTH_STAGE_2_PATH     :   './noise_longtail/model/animal_10N/classifer/checkpoint_best.pth.tar'
+JSON_PATH            : './noise_longtail/json/animal_10N/score_dict.json'
+FIANL_WEIGHT_PATH    :  './noise_longtail/json/animal_10N/final_dict.json'
+FINAL_MODEL_PATH     :  './noise_longtail/model/animal_10N/best_model/'
+
+
+#iterative learning
+ITER_CHECKPOINT_PATH      :  './noise_longtail/iterative_model/aniaml_10N/checkpoint/'
+ITER_CLASSIFER_PATH       :  './noise_longtail/iterative_model/aniaml_10N/classifer/'
+ITER_PTH_STAGE_1_PATH     :   './noise_longtail/iterative_model/aniaml_10N/checkpoint/checkpoint_best.pth.tar'
+ITER_PTH_STAGE_2_PATH     :   './noise_longtail/iterative_model/aniaml_10N/classifer/checkpoint_best.pth.tar'
+ITER_JSON_PATH            : './noise_longtail/iterative_json/aniaml_10N/score_dict.json'
+ITER_FIANL_WEIGHT_PATH    :  './noise_longtail/iterative_json/aniaml_10N/final_dict.json'
+ITER_FINAL_MODEL_PATH     :  './noise_longtail/iterative_model/aniaml_10N/best_model/'
+
+
+
+batch_size      : 512
+cls_num         : 10
+logit_adjust    : 0
+resample        : 0
+mix_up          : 1
+mix_up_weight   : 0

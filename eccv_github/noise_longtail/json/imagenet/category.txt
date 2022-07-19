@@ -1,0 +1,19 @@
+G1:   'Alaskan malamute' ,'Newfoundland dog','ladybug','American robin','French bulldog','Tibetan mastiff','king crab, Alaska crab',
+'meerkat, mierkat','jellyfish','black-footed ferret','miniature poodle','African hunting dog','golden retriever','Arctic fox, white fox','Ibizan hound, Ibizan Podenco'
+,'toucan','house finch','white wolf','Walker hound','lion','three-toed sloth','goose','rhinoceros beetle','Saluki Hund','ant','triceratops','bolete','nematode','dugong'
+
+
+
+G2:'one-armed bandit','spider web','worm fence, snake fence',
+'rock beauty','komondor','dalmatian','coral reef','green mamba','clog','chime, bell, gong',
+'cliff','harvestman'
+
+
+G3:'upright piano','Gordon setter','cocktail shaker','organ, pipe organ','prayer rug','combination lock','ashcan, trash can','scoreboard',
+'iPod','miniskirt','carton','pencil box','electric guitar','file cabinet','consomme','oboe','photocopier','hair slide','poncho','trifle','hourglass',
+'fire screen, fireguard','solar dish, solar collector','crate','ear, fruit','orange','vase','lipstick','reel','beer bottle','frying pan','wok','boxer',
+'mixing bowl','barrel','hotdog','dishrag','dome','cuirass','holster'
+
+
+G4:'unicycle, monocycle','tobacco shop','horizontal bar, high bar','school bus','carousel, carrousel','aircraft carrier','tile roof','street sign','bookshop',
+'theater curtain','tank, army tank','missile','stage','cannon','parallel bars','garbage truck','yawl','snorkel','catamaran'
