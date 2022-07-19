@@ -4,3 +4,4 @@ This project introduces a new challenge as Noisy Long-Tailed Classification (NLT
 
 The detailed instruction of creating benchmarks and other baselines are coming soon.
 
+We will also release a clearer version of implementation of H2E with notes soon.
