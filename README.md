@@ -28,7 +28,7 @@ Conventional de-noising methods rely on the assumption that all samples are inde
 Create a conda environment and install dependencies:
 
 ```bash
-git clone https://github.com/yxymessi/H2E-Framework/tree/main/eccv_github
+git clone https://github.com/yxymessi/H2E-Framework.git
 cd noise_longtail
 
 conda create -n H2E python=3.8
