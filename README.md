@@ -55,7 +55,7 @@ bash ./noise_longtail/run_H2E.sh
 
 ```
 ## Other baselines
-we are still preparing and clear up the codebase zoo of long-tailed and denoise methods suitable for our NLT benchmarks.
+We are still preparing and clear up the codebase zoo of long-tailed and denoise methods suitable for our NLT benchmarks.
 
 ## Acknowlegment
 This repo benifits from [(link)](https://github.com/filipe-research/tutorial_noisylabels), thanks for their wonderful works.
