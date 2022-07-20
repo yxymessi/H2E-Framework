@@ -490,7 +490,7 @@ weight_loader = torch.utils.data.DataLoader(dataset = weight_data,
 classifer_dict= torch.load(pth_file_stage_2)
 resnet_classifer.load_state_dict(classifer_dict)
 
-adjustment = compute_adjustment(weight_loader, resnet_classifer.module.get_tro())
+adjustment = compute_adjustment(weight_loader, resnet_classifer.module.get_tro().numpy())
 weight_dict = get_weight_dict(weight_loader,resnet_model,resnet_classifer,adjustment)
 with open (FIANL_WEIGHT_PATH,'w') as f:
     json.dump(weight_dict,f)
