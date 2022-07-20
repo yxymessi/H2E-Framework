@@ -1,5 +1,7 @@
 # Identifying Hard Noise in Long-Tailed Sample Distribution
-This project introduces a new challenge as Noisy Long-Tailed Classification (NLT) and three NLT benchmarks: ImageNet-NLT, Animal10-NLT, and Food101-NLT. The proposed H2E together with other baselines are also included. This project is the official implementation of the ECCV 2022(oral) paper Identifying Hard Noise in Long-Tailed Sample Distribution.
+This project introduces a new challenge as Noisy Long-Tailed Classification (NLT) and three NLT benchmarks: ImageNet-NLT, Animal10-NLT, and Food101-NLT. The proposed H2E together with other baselines are also included. This project is the official implementation of the ECCV 2022(oral) paper Identifying Hard Noise in Long-Tailed Sample Distribution. 
+
+A more decent version is coming soon!
 
 
 ## Introduction
@@ -56,7 +58,7 @@ bash ./noise_longtail/run_H2E.sh
 ```
 ## Other Baselines
 We are still preparing and clearing
- up the codebase zoo of long-tailed and denoise methods suitable for our NLT benchmarks.
+ up the codebase and model zoo of long-tailed and denoise methods suitable for our NLT benchmarks.
 
 ## Acknowlegment
 This repo benifits from [(link)](https://github.com/filipe-research/tutorial_noisylabels), thanks for their wonderful works.
