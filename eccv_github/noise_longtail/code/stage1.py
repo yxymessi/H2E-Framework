@@ -487,10 +487,10 @@ weight_loader = torch.utils.data.DataLoader(dataset = weight_data,
                                               shuffle = True,num_workers=0,pin_memory=True)
 
 
-classifer = create_irm_classifer(args.freq,num_classes=args.cls_num,feat_dim=512)
-resnet_classifer=nn.DataParallel(classifer,device_ids=[0,1,2,3])
 classifer_dict= torch.load(pth_file_stage_2)
-adjustment = compute_adjustment(weight_loader, classifer.module.get_tro())
+resnet_classifer.load_state_dict(classifer_dict)
+
+adjustment = compute_adjustment(weight_loader, resnet_classifer.module.get_tro())
 weight_dict = get_weight_dict(weight_loader,resnet_model,resnet_classifer,adjustment)
 with open (FIANL_WEIGHT_PATH,'w') as f:
     json.dump(weight_dict,f)
