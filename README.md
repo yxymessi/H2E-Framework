@@ -54,7 +54,7 @@ Please refer to ./noise_longtail/construct_data for processing the dataset. We w
 bash ./noise_longtail/run_H2E.sh
 
 ```
-## Other baselines
+## Other Baselines
 We are still preparing and clearing
  up the codebase zoo of long-tailed and denoise methods suitable for our NLT benchmarks.
 
