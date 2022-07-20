@@ -200,7 +200,7 @@ def train_env(train_loader,loss_function,optimizer,model,classifer,scheduler,arg
         save_checkpoint(
                   {
                       'epoch': epoch + 1,
-                      'state_dict': model.state_dict(),
+                      'state_dict': classifer.state_dict(),
                       
                   },
                   checkpoint = args.classifer_path,
@@ -238,7 +238,6 @@ def train_epoch_irm(net, classifer,loss_function, dataloader, optimizer):
 
         loss.backward()
         optimizer.step()
-    tro = classifer.module.get_tro()
     return loss
      #save the best
 
@@ -246,14 +245,18 @@ def train_epoch_irm(net, classifer,loss_function, dataloader, optimizer):
 
 # get instance-weight
 
-def get_weight_dict(dataloader,model,adjustment):
+def get_weight_dict(dataloader,model,classifer,adjustment):
     model.cuda()
     model.eval()
+    classifer.cuda()
+    classifer.eval()
+    
     weight_dict ={}
     for i ,(images,labels,paths) in tqdm(enumerate(dataloader)):
         images = images.to(device)
         labels = labels.to(device)
-        outputs = model(images) - adjustment
+        feature = model(images)
+        outputs = classfier(feature) - adjustment
         false_weight = 0.01
         # whether is true
         _, pred = torch.max(outputs, 1)
@@ -484,13 +487,11 @@ weight_loader = torch.utils.data.DataLoader(dataset = weight_data,
                                               shuffle = True,num_workers=0,pin_memory=True)
 
 
-model = models.resnet18(pretrained=False) 
-model.fc= nn.Linear(in_features=model.fc.in_features, out_features=args.cls_num)
-model_dict= torch.load(pth_file_stage_2)
-resnet_model=nn.DataParallel(model,device_ids=[0,1,2,3])
-resnet_model.load_state_dict(model_dict['state_dict'])
-adjustment = compute_adjustment(weight_loader, 1)
-weight_dict = get_weight_dict(weight_loader,resnet_model,adjustment)
+classifer = create_irm_classifer(args.freq,num_classes=args.cls_num,feat_dim=512)
+resnet_classifer=nn.DataParallel(classifer,device_ids=[0,1,2,3])
+classifer_dict= torch.load(pth_file_stage_2)
+adjustment = compute_adjustment(weight_loader, classifer.module.get_tro())
+weight_dict = get_weight_dict(weight_loader,resnet_model,resnet_classifer,adjustment)
 with open (FIANL_WEIGHT_PATH,'w') as f:
     json.dump(weight_dict,f)
 
